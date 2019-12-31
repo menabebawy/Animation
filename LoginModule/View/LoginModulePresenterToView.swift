@@ -9,4 +9,8 @@
 import Foundation
 
 protocol LoginModulePresenterToView: class {
+    func prepareViews()
+    func animateViews()
+    func faileToLoginDueToWrongCredentials()
+    func loggedInSuccessfully()
 }

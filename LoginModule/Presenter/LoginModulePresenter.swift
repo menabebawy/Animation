@@ -13,5 +13,16 @@ class LoginModulePresenter {
 }
 
 extension LoginModulePresenter: LoginModuleViewToPresenter {
+    func willPrepareViews() {
+        view.prepareViews()
+    }
+    
+    func willAnimateViews() {
+        view.animateViews()
+    }
+    
+    func didTapLoginButton(username: String?, password: String?) {
+        view.faileToLoginDueToWrongCredentials()
+    }
     
 }

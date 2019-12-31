@@ -24,6 +24,13 @@
 		FA93DA6123BA59F9008DDEA7 /* LoginModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93DA6023BA59F9008DDEA7 /* LoginModuleViewController.xib */; };
 		FA93DA6323BA5B45008DDEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA93DA6223BA5B44008DDEA7 /* Assets.xcassets */; };
 		FA93DA6423BA6673008DDEA7 /* LoginModuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA93DA6023BA59F9008DDEA7 /* LoginModuleViewController.xib */; };
+		FA9C42D423BB6670008AC507 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = FA9C42D223BB6670008AC507 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA9C42D723BB6671008AC507 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C42D023BB6670008AC507 /* Utils.framework */; };
+		FA9C42D823BB6671008AC507 /* Utils.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C42D023BB6670008AC507 /* Utils.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FA9C42DD23BB6685008AC507 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42DC23BB6685008AC507 /* UIView+Extension.swift */; };
+		FA9C42DF23BB6CE7008AC507 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C42D023BB6670008AC507 /* Utils.framework */; };
+		FA9C42E123BB7176008AC507 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */; };
+		FA9C42E323BB7BE0008AC507 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,13 @@
 			remoteGlobalIDString = FA93DA3F23BA576E008DDEA7;
 			remoteInfo = LoginModule;
 		};
+		FA9C42D523BB6671008AC507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA93DA1E23BA5726008DDEA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA9C42CF23BB6670008AC507;
+			remoteInfo = Utils;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +57,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FA9C42D823BB6671008AC507 /* Utils.framework in Embed Frameworks */,
 				FA93DA4823BA576E008DDEA7 /* LoginModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -69,6 +84,12 @@
 		FA93DA5E23BA59B9008DDEA7 /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
 		FA93DA6023BA59F9008DDEA7 /* LoginModuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginModuleViewController.xib; sourceTree = "<group>"; };
 		FA93DA6223BA5B44008DDEA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Animation/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		FA9C42D023BB6670008AC507 /* Utils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Utils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA9C42D223BB6670008AC507 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		FA9C42D323BB6670008AC507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA9C42DC23BB6685008AC507 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +97,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9C42D723BB6671008AC507 /* Utils.framework in Frameworks */,
 				FA93DA4723BA576E008DDEA7 /* LoginModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA93DA3D23BA576E008DDEA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9C42DF23BB6CE7008AC507 /* Utils.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9C42CD23BB6670008AC507 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,7 +125,9 @@
 			children = (
 				FA93DA2823BA5726008DDEA7 /* Animation */,
 				FA93DA4123BA576E008DDEA7 /* LoginModule */,
+				FA9C42D123BB6670008AC507 /* Utils */,
 				FA93DA2723BA5726008DDEA7 /* Products */,
+				FA9C42DE23BB6CE7008AC507 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +136,7 @@
 			children = (
 				FA93DA2623BA5726008DDEA7 /* Animation.app */,
 				FA93DA4023BA576E008DDEA7 /* LoginModule.framework */,
+				FA9C42D023BB6670008AC507 /* Utils.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +203,25 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		FA9C42D123BB6670008AC507 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FA9C42D223BB6670008AC507 /* Utils.h */,
+				FA9C42D323BB6670008AC507 /* Info.plist */,
+				FA9C42DC23BB6685008AC507 /* UIView+Extension.swift */,
+				FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */,
+				FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FA9C42DE23BB6CE7008AC507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -178,6 +230,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA93DA4423BA576E008DDEA7 /* LoginModule.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9C42CB23BB6670008AC507 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9C42D423BB6670008AC507 /* Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +257,7 @@
 			);
 			dependencies = (
 				FA93DA4623BA576E008DDEA7 /* PBXTargetDependency */,
+				FA9C42D623BB6671008AC507 /* PBXTargetDependency */,
 			);
 			name = Animation;
 			productName = Animation;
@@ -221,6 +282,24 @@
 			productReference = FA93DA4023BA576E008DDEA7 /* LoginModule.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FA9C42CF23BB6670008AC507 /* Utils */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA9C42DB23BB6671008AC507 /* Build configuration list for PBXNativeTarget "Utils" */;
+			buildPhases = (
+				FA9C42CB23BB6670008AC507 /* Headers */,
+				FA9C42CC23BB6670008AC507 /* Sources */,
+				FA9C42CD23BB6670008AC507 /* Frameworks */,
+				FA9C42CE23BB6670008AC507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Utils;
+			productName = Utils;
+			productReference = FA9C42D023BB6670008AC507 /* Utils.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -236,6 +315,10 @@
 					};
 					FA93DA3F23BA576E008DDEA7 = {
 						CreatedOnToolsVersion = 10.0;
+					};
+					FA9C42CF23BB6670008AC507 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -254,6 +337,7 @@
 			targets = (
 				FA93DA2523BA5726008DDEA7 /* Animation */,
 				FA93DA3F23BA576E008DDEA7 /* LoginModule */,
+				FA9C42CF23BB6670008AC507 /* Utils */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +359,13 @@
 			files = (
 				FA93DA6323BA5B45008DDEA7 /* Assets.xcassets in Resources */,
 				FA93DA6123BA59F9008DDEA7 /* LoginModuleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA9C42CE23BB6670008AC507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +395,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA9C42CC23BB6670008AC507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9C42E123BB7176008AC507 /* UIViewController+Extension.swift in Sources */,
+				FA9C42DD23BB6685008AC507 /* UIView+Extension.swift in Sources */,
+				FA9C42E323BB7BE0008AC507 /* CGSize+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -311,6 +412,11 @@
 			isa = PBXTargetDependency;
 			target = FA93DA3F23BA576E008DDEA7 /* LoginModule */;
 			targetProxy = FA93DA4523BA576E008DDEA7 /* PBXContainerItemProxy */;
+		};
+		FA9C42D623BB6671008AC507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA9C42CF23BB6670008AC507 /* Utils */;
+			targetProxy = FA9C42D523BB6671008AC507 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -538,6 +644,65 @@
 			};
 			name = Release;
 		};
+		FA9C42D923BB6671008AC507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3J9P95R689;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mena.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FA9C42DA23BB6671008AC507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 3J9P95R689;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Utils/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mena.Utils;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -564,6 +729,15 @@
 			buildConfigurations = (
 				FA93DA4923BA576E008DDEA7 /* Debug */,
 				FA93DA4A23BA576E008DDEA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA9C42DB23BB6671008AC507 /* Build configuration list for PBXNativeTarget "Utils" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA9C42D923BB6671008AC507 /* Debug */,
+				FA9C42DA23BB6671008AC507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -9,4 +9,7 @@
 import Foundation
 
 protocol LoginModuleViewToPresenter {
+    func willPrepareViews()
+    func willAnimateViews()
+    func didTapLoginButton(username: String?, password: String?)
 }
