@@ -22,7 +22,11 @@ extension LoginModulePresenter: LoginModuleViewToPresenter {
     }
     
     func didTapLoginButton(username: String?, password: String?) {
-        view.faileToLoginDueToWrongCredentials()
+        view.validateCredentials()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            let isValid = username == "admin" && password == "admin123"
+            isValid ? self.view.loggedInSuccessfully() : self.view.faileToLoginDueToWrongCredentials()
+        }
     }
     
 }

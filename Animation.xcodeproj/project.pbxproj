@@ -31,6 +31,8 @@
 		FA9C42DF23BB6CE7008AC507 /* Utils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA9C42D023BB6670008AC507 /* Utils.framework */; };
 		FA9C42E123BB7176008AC507 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */; };
 		FA9C42E323BB7BE0008AC507 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */; };
+		FA9C42F923BB8F55008AC507 /* SpinerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42F723BB8ECF008AC507 /* SpinerLayer.swift */; };
+		FA9C42FB23BB8F73008AC507 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C42FA23BB8F73008AC507 /* CGRect+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		FA9C42DC23BB6685008AC507 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGSize+Extension.swift"; sourceTree = "<group>"; };
+		FA9C42F723BB8ECF008AC507 /* SpinerLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinerLayer.swift; sourceTree = "<group>"; };
+		FA9C42FA23BB8F73008AC507 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,11 +210,13 @@
 		FA9C42D123BB6670008AC507 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FA9C42D223BB6670008AC507 /* Utils.h */,
-				FA9C42D323BB6670008AC507 /* Info.plist */,
 				FA9C42DC23BB6685008AC507 /* UIView+Extension.swift */,
 				FA9C42E023BB7176008AC507 /* UIViewController+Extension.swift */,
 				FA9C42E223BB7BE0008AC507 /* CGSize+Extension.swift */,
+				FA9C42FA23BB8F73008AC507 /* CGRect+Extension.swift */,
+				FA9C42F723BB8ECF008AC507 /* SpinerLayer.swift */,
+				FA9C42D223BB6670008AC507 /* Utils.h */,
+				FA9C42D323BB6670008AC507 /* Info.plist */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -401,7 +407,9 @@
 			files = (
 				FA9C42E123BB7176008AC507 /* UIViewController+Extension.swift in Sources */,
 				FA9C42DD23BB6685008AC507 /* UIView+Extension.swift in Sources */,
+				FA9C42F923BB8F55008AC507 /* SpinerLayer.swift in Sources */,
 				FA9C42E323BB7BE0008AC507 /* CGSize+Extension.swift in Sources */,
+				FA9C42FB23BB8F73008AC507 /* CGRect+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

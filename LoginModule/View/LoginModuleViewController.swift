@@ -34,6 +34,12 @@ public final class LoginModuleViewController: UIViewController {
                 loginButtonCenterConstraint]
     }
     
+    private lazy var spiner: SpinerLayer = {
+        let spiner = SpinerLayer(frame: loginButton.frame)
+        loginButton.layer.addSublayer(spiner)
+        return spiner
+    }()
+    
     var viewToPresenterProtocol: LoginModuleViewToPresenter!
     weak var delegate: LoginModuleViewControllerDelegate?
     
@@ -59,6 +65,7 @@ public final class LoginModuleViewController: UIViewController {
 extension LoginModuleViewController: LoginModulePresenterToView {
     func prepareViews() {
         orderedViewsCenterConstraint.forEach { $0.constant -= view.bounds.width }
+        loginButton.cornerRadius = 8
     }
     
     func animateViews() {
@@ -109,14 +116,35 @@ extension LoginModuleViewController: LoginModulePresenterToView {
         imageView.height *= size.height
         imageView.width *= size.width
     }
-
     
-    func faileToLoginDueToWrongCredentials() {
-        loginButton.shake(margin: 10, duration: 0.7)
+    func validateCredentials() {
+        loginButton.isUserInteractionEnabled = false
+        loginButton.setTitle("", for: .normal)
         view.endEditing(true)
+        UIView.animate(withDuration: 0.1, animations: { [weak self] in
+            guard let `self` = self else { return }
+            self.loginButton.cornerRadius = self.loginButton.height / 2
+        }, completion: { completed -> Void in
+            self.loginButton.shrink()
+            self.spiner.animation()
+        })
+    }
+
+    func faileToLoginDueToWrongCredentials() {
+        updateUIAfterGetResponse()
+        loginButton.shake(margin: 10, duration: 0.7)
     }
     
     func loggedInSuccessfully() {
+        updateUIAfterGetResponse()
+    }
+    
+    private func updateUIAfterGetResponse() {
+        loginButton.animateToOriginalWidth()
+        spiner.stopAnimation()
+        loginButton.cornerRadius = 8
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.isUserInteractionEnabled = true
     }
     
 }
