@@ -31,7 +31,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ltn-pj-MYc" userLabel="Background Image View">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Ltn-pj-MYc" userLabel="Background Image View">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cloud 1" translatesAutoresizingMaskIntoConstraints="NO" id="rXt-Pa-LGe" userLabel="Cloud 1 Image View">
@@ -95,7 +95,7 @@
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
+                            <real key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -140,10 +140,10 @@
         </customObject>
     </objects>
     <resources>
-        <image name="Background" width="320" height="568"/>
         <image name="Cloud 1" width="159" height="50"/>
         <image name="Cloud 2" width="138" height="49"/>
         <image name="Cloud 3" width="74" height="35"/>
         <image name="Cloud 4" width="115" height="50"/>
+        <image name="LoginBackground" width="320" height="568"/>
     </resources>
 </document>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeModuleViewController" customModule="Animation" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HomeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="20O-mg-2Tb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="20O-mg-2Tb" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="B1d-AJ-8K1"/>
+                <constraint firstItem="20O-mg-2Tb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VbN-7y-2Si"/>
+                <constraint firstItem="20O-mg-2Tb" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bxO-cw-7k2"/>
+                <constraint firstItem="20O-mg-2Tb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d1i-Tn-5Ds"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="57.5" y="58.5"/>
+        </view>
+        <customObject id="VDP-c2-3Af" customClass="HomeModuleInitalizer" customModule="HomeModule">
+            <connections>
+                <outlet property="homeModuleViewController" destination="-1" id="T2x-wE-68s"/>
+            </connections>
+        </customObject>
+    </objects>
+    <resources>
+        <image name="HomeBackground" width="3356" height="5960"/>
+    </resources>
+</document>

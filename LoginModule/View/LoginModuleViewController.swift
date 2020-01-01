@@ -8,6 +8,7 @@
 
 import UIKit
 import Utils
+import CircularTransition
 
 public protocol LoginModuleViewControllerDelegate: class {
     func loginModuleViewControllerLoggedIn(_ controller: LoginModuleViewController)
@@ -27,6 +28,8 @@ public final class LoginModuleViewController: UIViewController {
     @IBOutlet weak private var usernameTextField: UITextField!
     @IBOutlet weak private var usernameTextFieldCenterConstraint: NSLayoutConstraint!
     
+    private let transition = CircularTransition()
+    
     private var orderedViewsCenterConstraint: [NSLayoutConstraint] {
         return [headerLabelCenterConstraint,
                 usernameTextFieldCenterConstraint,
@@ -41,7 +44,7 @@ public final class LoginModuleViewController: UIViewController {
     }()
     
     var viewToPresenterProtocol: LoginModuleViewToPresenter!
-    weak var delegate: LoginModuleViewControllerDelegate?
+    weak public var delegate: LoginModuleViewControllerDelegate?
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -64,6 +67,7 @@ public final class LoginModuleViewController: UIViewController {
 
 extension LoginModuleViewController: LoginModulePresenterToView {
     func prepareViews() {
+        loginButton.backgroundColor = UIColor.buttonColor()
         orderedViewsCenterConstraint.forEach { $0.constant -= view.bounds.width }
         loginButton.cornerRadius = 8
     }
@@ -87,7 +91,7 @@ extension LoginModuleViewController: LoginModulePresenterToView {
     private func updateLayout() {
         view.layoutIfNeeded()
     }
-
+    
     private func animateClouds() {
         let options: UIView.AnimationOptions = [.curveEaseInOut, .repeat, .autoreverse]
         animate(updateCloud1ImageView, duration: 2.9, options: options)
@@ -124,22 +128,22 @@ extension LoginModuleViewController: LoginModulePresenterToView {
         UIView.animate(withDuration: 0.1, animations: { [weak self] in
             guard let `self` = self else { return }
             self.loginButton.cornerRadius = self.loginButton.height / 2
-        }, completion: { completed -> Void in
-            self.loginButton.shrink()
-            self.spiner.animation()
+            }, completion: { completed -> Void in
+                self.loginButton.shrink()
+                self.spiner.animation()
         })
     }
-
+    
     func faileToLoginDueToWrongCredentials() {
         updateUIAfterGetResponse()
         loginButton.shake(margin: 10, duration: 0.7)
     }
     
     func loggedInSuccessfully() {
-        updateUIAfterGetResponse()
+        delegate?.loginModuleViewControllerLoggedIn(self)
     }
     
-    private func updateUIAfterGetResponse() {
+    public func updateUIAfterGetResponse() {
         loginButton.animateToOriginalWidth()
         spiner.stopAnimation()
         loginButton.cornerRadius = 8
@@ -147,4 +151,23 @@ extension LoginModuleViewController: LoginModulePresenterToView {
         loginButton.isUserInteractionEnabled = true
     }
     
+}
+
+extension LoginModuleViewController: UIViewControllerTransitioningDelegate {
+    public func animationController(forPresented presented: UIViewController,
+                             presenting: UIViewController,
+                             source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = loginButton.center
+        transition.circleColor = loginButton.backgroundColor!
+        return transition
+    }
+    
+    public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = loginButton.center
+        transition.circleColor = loginButton.backgroundColor!
+        return transition
+    }
+
 }
