@@ -153,6 +153,8 @@ extension LoginModuleViewController: LoginModulePresenterToView {
     
 }
 
+// MARK: - View controller transitioning delegate
+
 extension LoginModuleViewController: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController,
                              presenting: UIViewController,

@@ -77,7 +77,9 @@ extension CircularTransition: UIViewControllerAnimatedTransitioning {
                 let viewSize = returningView.frame.size
                 
                 
-                circle.frame = frameForCircle(withViewCenter: viewCenter, size: viewSize, startPoint: startingPoint)
+                circle.frame = frameForCircle(withViewCenter: viewCenter,
+                                              size: viewSize,
+                                              startPoint: startingPoint)
                 
                 circle.layer.cornerRadius = circle.frame.size.height / 2
                 circle.center = startingPoint

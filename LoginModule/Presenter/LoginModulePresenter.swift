@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LoginModulePresenter {
+final class LoginModulePresenter {
     weak var view: LoginModulePresenterToView!
 }
 
@@ -23,8 +23,8 @@ extension LoginModulePresenter: LoginModuleViewToPresenter {
     
     func didTapLoginButton(username: String?, password: String?) {
         view.validateCredentials()
+        let isValid = username == "admin" && password == "admin123"
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            let isValid = username == "admin" && password == "admin123"
             isValid ? self.view.loggedInSuccessfully() : self.view.faileToLoginDueToWrongCredentials()
         }
     }

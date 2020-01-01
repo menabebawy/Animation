@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginModuleInitalizer: NSObject {
+final class LoginModuleInitalizer: NSObject {
     @IBOutlet weak private var loginModuleViewController: LoginModuleViewController!
     
     override func awakeFromNib() {
@@ -16,5 +16,5 @@ class LoginModuleInitalizer: NSObject {
         let configurator = LoginModuleConfigurator()
         configurator.configureModuleForViewInput(viewInput: loginModuleViewController)
     }
-
+    
 }
