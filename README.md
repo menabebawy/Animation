@@ -24,7 +24,7 @@ To be able test login (username: admin, password: admin123)
 
 ## Features
 
-Animating home navigation bar gradiant image along device emtions `In Progress`
+Animatied gradient navigation bar image on home screen by device emtions `In Progress and need to be tested`
 
 ## Refrences
 
