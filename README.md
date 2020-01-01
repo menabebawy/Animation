@@ -1,11 +1,11 @@
-[![Swift 4.0](https://img.shields.io/badge/swift-4.0-red.svg?style=flat)](https://developer.apple.com/swift)
+[![Swift 4.0](https://img.shields.io/badge/swift-4.0-green.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](https://opensource.org/licenses/MIT)
 
 # Animation
 
 It implements custome transitions && UI 
 
-![](demo/animation-app-demo.gif)
+![](demo/animation-demo.gif)
 
 ## Getting Started
 
@@ -22,6 +22,9 @@ Clone then run :rocket::rocket:
 
 To be able test login (username: admin, password: admin123)
 
+## Features
+
+Animating home navigation bar gradiant image along device emtions `In Progress`
 
 ## Refrences
 
