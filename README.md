@@ -20,7 +20,7 @@ Clone then run :rocket::rocket:
 
 ### Credentials
 
-To be able test login (username: admin, password: admin123)
+To be able to test login (username: admin, password: admin123)
 
 ## Features
 
