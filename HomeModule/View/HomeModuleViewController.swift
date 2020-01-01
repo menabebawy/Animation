@@ -24,7 +24,7 @@ public final class HomeModuleViewController: UIViewController {
         viewToPresenterProtocol.viewIsReady()
     }
     
-    @IBAction private func dismissButtonClicked() {
+    @objc private func logoutButtonClicked() {
         delegate?.homeModuleViewControllerDismiss(self)
     }
 
@@ -33,6 +33,10 @@ public final class HomeModuleViewController: UIViewController {
 // MARK: - Home module presenter to view
 
 extension HomeModuleViewController: HomeModulePresenterToView {
+    func addTitle() {
+        title = "Home"
+    }
+
     func addNavigationBarImage() {
         if let navigationBar = navigationController?.navigationBar {
             var bounds = navigationBar.bounds
@@ -49,11 +53,19 @@ extension HomeModuleViewController: HomeModulePresenterToView {
         }
     }
     
+    func addLogoutItemButton() {
+        let logoutButtonItem = UIBarButtonItem.init(
+            barButtonSystemItem: .undo,
+            target: self,
+            action: #selector(logoutButtonClicked))
+        navigationItem.leftBarButtonItem = logoutButtonItem
+    }
+    
     func moveGradient(gravityX: Double, gravityY: Double) {
         // Couldn't be tested due to cell phone OS version
         let animation = CABasicAnimation()
-        animation.fromValue = [0.4,0]
-        animation.toValue = [0,0]
+        animation.fromValue = [0.4, 0]
+        animation.toValue = [0.6, 0]
         animation.autoreverses = false
         gradient.add(animation, forKey: nil)
     }

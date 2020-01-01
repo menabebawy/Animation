@@ -31,7 +31,9 @@ final class HomeModulePresenter {
 
 extension HomeModulePresenter: HomeModuleViewToPresenter {
     func viewIsReady() {
+        view.addTitle()
         view.addNavigationBarImage()
+        view.addLogoutItemButton()
         trackMotion()
     }
     

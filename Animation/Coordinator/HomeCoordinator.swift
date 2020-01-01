@@ -25,10 +25,10 @@ final class HomeCoordinator: Coordinator {
     func start() {
         let nibName = String(describing: HomeModuleViewController.self)
         let homeViewController = HomeModuleViewController(nibName: nibName, bundle: .main)
-        homeViewController.delegate = self
-        homeViewController.transitioningDelegate = navigationController.viewControllers.first! as? UIViewControllerTransitioningDelegate
-        homeViewController.modalPresentationStyle = .custom
         let navController = UINavigationController(rootViewController: homeViewController)
+        homeViewController.delegate = self
+        navController.transitioningDelegate = navigationController.viewControllers.first! as? UIViewControllerTransitioningDelegate
+        navController.modalPresentationStyle = .custom
         navigationController.present(navController, animated: true, completion: { [weak self] in
             guard let `self` = self else { return }
             self.delegate?.homeCoordinatorDidPresent(self)

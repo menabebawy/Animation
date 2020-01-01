@@ -10,5 +10,7 @@ import Foundation
 
 protocol HomeModulePresenterToView: class {
     func addNavigationBarImage()
+    func addTitle()
+    func addLogoutItemButton()
     func moveGradient(gravityX: Double, gravityY: Double)
 }
